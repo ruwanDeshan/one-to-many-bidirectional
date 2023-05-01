@@ -1,5 +1,6 @@
 package entity;
 
+import javax.persistence.*;
 import java.util.List;
 
 @Entity(name = "student_table")

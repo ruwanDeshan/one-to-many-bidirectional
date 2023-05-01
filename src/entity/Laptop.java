@@ -12,7 +12,9 @@ public class Laptop {
     private String brand;
 
     //--------mapping------------
-
+    @ManyToOne
+    @JoinColumn(name = "student_id")
+    private Student student;
     //--------mapping------------
 
 
@@ -22,6 +24,14 @@ public class Laptop {
     public Laptop(long laptopId, String brand) {
         this.laptopId = laptopId;
         this.brand = brand;
+    }
+
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
     }
 
     public long getLaptopId() {
